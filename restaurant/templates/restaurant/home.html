@@ -1,0 +1,273 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Authentic Nepali Taste,<br>Served with Tradition</h2>
+        <p>Experience the soul of Nepal in every bite at Hajurbako Chulo.</p>
+        <div class="hero-btns">
+            <a href="#menu" class="btn-primary">View Menu</a>
+            <a href="#reservation" class="btn-secondary">Reserve a Table</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Us -->
+<section class="section reveal" id="about">
+    <div class="section-title">
+        <h2>Our Story</h2>
+        <div class="divider"></div>
+        <p>A heritage of flavor handed down through generations.</p>
+    </div>
+    <div class="about-container">
+        <div class="about-img">
+            <img src="{% static 'restaurant/images/about-dish.jpg' %}" alt="Traditional Nepali Kitchen">
+        </div>
+        <div class="about-text">
+            <h3>Hajurbako Chulo</h3>
+            <p>At Hajurbako Chulo, we believe that food is more than just sustenance; it's a celebration of culture, family, and tradition. Our name, which translates to "Grandfather's Hearth," reflects our commitment to preserving the authentic flavors of homemade Nepali cuisine.</p>
+            <p>Every dish we serve is prepared using traditional recipes and the finest local ingredients, bringing the warmth and hospitality of a Nepali home to each of our guests. Join us for a culinary journey through the hills and valleys of Nepal.</p>
+            <a href="#menu" class="btn-primary">Discover More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Dishes -->
+<section class="section reveal" style="background: white;">
+    <div class="section-title">
+        <h2>Featured Delights</h2>
+        <div class="divider"></div>
+        <p>Our most loved authentic Nepali delicacies.</p>
+    </div>
+    <div class="dishes-grid">
+        {% for dish in featured_dishes %}
+        <div class="dish-card">
+            <div class="dish-img">
+                <img src="{{ dish.image.url }}" alt="{{ dish.name }}">
+            </div>
+            <div class="dish-info">
+                <h3>{{ dish.name }}</h3>
+                <p>{{ dish.description }}</p>
+                <div class="dish-price">Rs. {{ dish.price }}</div>
+            </div>
+        </div>
+        {% empty %}
+        <!-- Placeholder cards if no data in DB -->
+        <div class="dish-card">
+            <div class="dish-img">
+                <img src="{% static 'restaurant/images/dal-bhat.jpg' %}" alt="Dal Bhat">
+            </div>
+            <div class="dish-info">
+                <h3>Thakali Dal Bhat</h3>
+                <p>Authentic Thakali set with lentils, rice, vegetable curry, and spicy pickles.</p>
+                <div class="dish-price">Rs. 850</div>
+            </div>
+        </div>
+        <div class="dish-card">
+            <div class="dish-img">
+                <img src="{% static 'restaurant/images/momo.jpg' %}" alt="Momo">
+            </div>
+            <div class="dish-info">
+                <h3>Steamed Momo</h3>
+                <p>Traditional Nepali dumplings with spicy sesame tomato chutney.</p>
+                <div class="dish-price">Rs. 450</div>
+            </div>
+        </div>
+        <div class="dish-card">
+            <div class="dish-img">
+                <img src="{% static 'restaurant/images/sekuwa.jpg' %}" alt="Sekuwa">
+            </div>
+            <div class="dish-info">
+                <h3>Mutton Sekuwa</h3>
+                <p>Traditional charcoal-grilled mutton marinated in local spices.</p>
+                <div class="dish-price">Rs. 750</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section reveal">
+    <div class="section-title">
+        <h2>Why Hajurbako Chulo?</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="features-container">
+        <div class="feature-box">
+            <i class="fas fa-leaf"></i>
+            <h3>Organic Ingredients</h3>
+            <p>We source our ingredients directly from local farmers to ensure freshness and quality.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-fire-alt"></i>
+            <h3>Traditional Cooking</h3>
+            <p>Our chefs use clay ovens and wood fires to capture the authentic smoky flavors.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-heart"></i>
+            <h3>Homemade Love</h3>
+            <p>Every meal is prepared with the same care and love as a homemade feast.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section class="section reveal" id="menu" style="background: #fff;">
+    <div class="section-title">
+        <h2>Full Menu</h2>
+        <div class="divider"></div>
+        <p>Explore our wide range of traditional flavors.</p>
+    </div>
+    
+    <div class="menu-tabs">
+        {% for category in categories %}
+        <div class="menu-tab {% if forloop.first %}active{% endif %}" data-target="{{ category.slug }}">
+            {{ category.name }}
+        </div>
+        {% empty %}
+        <div class="menu-tab active">Main Course</div>
+        <div class="menu-tab">Snacks</div>
+        <div class="menu-tab">Desserts</div>
+        {% endfor %}
+    </div>
+
+    <div class="menu-items-container">
+        {% for category in categories %}
+        <div class="menu-items-group" id="{{ category.slug }}" style="display: {% if forloop.first %}grid{% else %}none{% endif %};">
+            <div class="menu-items">
+                {% for item in category.items.all %}
+                <div class="menu-item">
+                    <div class="item-details">
+                        <h4>{{ item.name }}</h4>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    <div class="item-price">Rs. {{ item.price }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% empty %}
+        <div class="menu-items">
+            <div class="menu-item">
+                <div class="item-details">
+                    <h4>Newari Khaja Set</h4>
+                    <p>Beaten rice with various side dishes like choila, bhatmas, and more.</p>
+                </div>
+                <div class="item-price">Rs. 650</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <h4>Chatamari</h4>
+                    <p>Rice flour crepe topped with minced meat and egg.</p>
+                </div>
+                <div class="item-price">Rs. 350</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <h4>Yomari</h4>
+                    <p>Steamed rice-flour dumpling filled with molasses and sesame seeds.</p>
+                </div>
+                <div class="item-price">Rs. 250</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="section reveal" id="gallery">
+    <div class="section-title">
+        <h2>Visual Journey</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="gallery-grid">
+        {% for item in gallery_items %}
+        <div class="gallery-item">
+            <img src="{{ item.image.url }}" alt="{{ item.title }}">
+        </div>
+        {% empty %}
+        <div class="gallery-item"><img src="{% static 'restaurant/images/g1.jpg' %}" alt="Gallery 1"></div>
+        <div class="gallery-item"><img src="{% static 'restaurant/images/g2.jpg' %}" alt="Gallery 2"></div>
+        <div class="gallery-item"><img src="{% static 'restaurant/images/g3.jpg' %}" alt="Gallery 3"></div>
+        <div class="gallery-item"><img src="{% static 'restaurant/images/g4.jpg' %}" alt="Gallery 4"></div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section reveal" style="background: white;">
+    <div class="section-title">
+        <h2>What Guests Say</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="testimonials-slider">
+        {% for testimonial in testimonials %}
+        <div class="testimonial-card">
+            <p>"{{ testimonial.content }}"</p>
+            <div class="user-info">
+                {% if testimonial.image %}
+                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="user-img">
+                {% else %}
+                <div class="user-img"></div>
+                {% endif %}
+                <div>
+                    <h4>{{ testimonial.name }}</h4>
+                    <small>{{ testimonial.role }}</small>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="testimonial-card">
+            <p>"The Thakali Set was incredible. It tasted exactly like what I've had in the Mustang region. Truly authentic!"</p>
+            <div class="user-info">
+                <div class="user-img"></div>
+                <div>
+                    <h4>Rupak Sharma</h4>
+                    <small>Food Critic</small>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Reservation -->
+<section class="section reveal reservation" id="reservation">
+    <div class="section-title">
+        <h2 style="color: white;">Reserve Your Table</h2>
+        <div class="divider"></div>
+        <p style="color: var(--cream);">Plan your visit and enjoy an unforgettable meal.</p>
+    </div>
+    
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" style="background: var(--gold); color: var(--maroon); padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center;">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <form class="reservation-form" method="POST">
+        {% csrf_token %} 
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="number" name="guests" placeholder="No. of Guests" required>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <textarea name="message" placeholder="Special Requests (Optional)"></textarea>
+        <button type="submit" class="btn-primary">Confirm Reservation</button>
+    </form>
+</section>
+
+<!-- Integration for map -->
+<section style="padding: 0;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14129.563065640243!2d85.31165185!3d27.7052354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907b223402d%3A0xc07cf3543d81b379!2sDurbar%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1687000000000!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+{% endblock %}
