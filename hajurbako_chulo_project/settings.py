@@ -25,11 +25,12 @@ SECRET_KEY = 'django-insecure-om(-b!52l81ym00l!4c+g0c6(p20&q)(8)k-umcz1cq19fhfuy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'gracious-renewal-production-2071.up.railway.app',
-    'localhost',
-    '127.0.0.1',
-]
+import os
+
+ALLOWED_HOSTS = os.environ.get(
+    'DJANGO_ALLOWED_HOSTS',
+    'localhost,127.0.0.1'
+).split(',')
 
 
 
