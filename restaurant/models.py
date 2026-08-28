@@ -13,9 +13,9 @@ class Category(models.Model):
 class MenuItem(models.Model):
     category = models.ForeignKey(Category, related_name='items', on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(upload_to='menu_items/')
+    image = models.ImageField(upload_to='menu_items/', null=True, blank=True)
     is_featured = models.BooleanField(default=False)
     is_available = models.BooleanField(default=True)
 
