@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-om(-b!52l81ym00l!4c+g0c6(p20&q)(8)k-umcz1cq19fhfuy
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'gracious-renewal-production-2071.up.railway.app',
     'localhost',
     '127.0.0.1',
-    'hajurbako-chulo-production.up.railway.app',
 ]
 
 
