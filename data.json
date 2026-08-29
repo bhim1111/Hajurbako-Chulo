@@ -1,0 +1,1672 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$7yhwkPqQyW6kKORqR1IK1q$iPuGy8QUnCR69oEZcWLr3/2zZXWoRgqkm0gDlDc0Rlc=",
+    "last_login": "2026-07-02T11:24:36.405Z",
+    "is_superuser": true,
+    "username": "bhim",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-17T12:05:04.777Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$WIJqCJjlCOHegMeOZf9n3H$UQYfmOvF19A0dJ40FEsG0vHAUiY/5+bTbB8RbCfIEMs=",
+    "last_login": "2026-08-24T03:46:21.953Z",
+    "is_superuser": true,
+    "username": "mihb",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-24T03:45:33.826Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "81e8rjq32dwm90mjnmekgt57m7x122qt",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGlngdfyhpM8ZrN31BgeQI8VJhbg7iZQCypn3Zt4q4bqUtDaZ05jVVV3U6bcj5KfUHeQH1vukearLPJLeFX3Qpvspy-t2uH8HBVvZ1sGg76wHwjBEdEwyUEaIDqwY7jxEcJ7JBLIULQJmd-aAEIhItqg-X_USOL8:1wfFX2:WxMk_JDeCVxnY-vVDZ8vc4g58YNOLPtuZaW85QlDeVQ",
+    "expire_date": "2026-07-16T11:24:36.406Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l2md68jtd0h2ffhyokzkffpzj00ixh13",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSG-C6RM7zOghcXBSYQlY1dR7h5bcpEU08x7M28WcVtr3HpZ4kTsyhS7_HYJ87O0A9AD233meW7rMiV-KPyknQ8zldftdP8OKva6rzHZYOQIwUmnQAIIDWDJmD0uWCtIjyL5jKg9gPRe2ozeebQktUrIPl-nLDaM:1wyLdd:uETQDwrA2Rm_RyVJ69qgZ4r_XS8oWY3jV3HTzJw_Mnw",
+    "expire_date": "2026-09-07T03:46:21.954Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ncusjjlxilk3q4le98ct2qc0z9xdq7qm",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGlngdfyhpM8ZrN31BgeQI8VJhbg7iZQCypn3Zt4q4bqUtDaZ05jVVV3U6bcj5KfUHeQH1vukearLPJLeFX3Qpvspy-t2uH8HBVvZ1sGg76wHwjBEdEwyUEaIDqwY7jxEcJ7JBLIULQJmd-aAEIhItqg-X_USOL8:1wZp1R:SIAnxBQgJ9XMWvI0A-jTIEJkQBeXnAB6id01yJU1Ryk",
+    "expire_date": "2026-07-01T12:05:33.373Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tjtp1gwy9w4gp3dyos90jcg4fvn5446b",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGlngdfyhpM8ZrN31BgeQI8VJhbg7iZQCypn3Zt4q4bqUtDaZ05jVVV3U6bcj5KfUHeQH1vukearLPJLeFX3Qpvspy-t2uH8HBVvZ1sGg76wHwjBEdEwyUEaIDqwY7jxEcJ7JBLIULQJmd-aAEIhItqg-X_USOL8:1wZtTo:1ZXl5Y1AWrgwws3gKJ86lf5OrNoD_7JQ6b0-IMOprSo",
+    "expire_date": "2026-07-01T16:51:08.179Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wh3kdbxjo0vn6zsmgf76znah96z3tzu1",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGlngdfyhpM8ZrN31BgeQI8VJhbg7iZQCypn3Zt4q4bqUtDaZ05jVVV3U6bcj5KfUHeQH1vukearLPJLeFX3Qpvspy-t2uH8HBVvZ1sGg76wHwjBEdEwyUEaIDqwY7jxEcJ7JBLIULQJmd-aAEIhItqg-X_USOL8:1wZr5Y:6VNWimK1azLw2gtmhjgpcFB3LpDbt-T9bs27KzDxD0Q",
+    "expire_date": "2026-07-01T14:17:56.469Z"
+  }
+},
+{
+  "model": "restaurant.category",
+  "pk": 4,
+  "fields": {
+    "name": "Main Course",
+    "slug": "main-course"
+  }
+},
+{
+  "model": "restaurant.category",
+  "pk": 5,
+  "fields": {
+    "name": "Snacks & Appetizers",
+    "slug": "snacks"
+  }
+},
+{
+  "model": "restaurant.category",
+  "pk": 6,
+  "fields": {
+    "name": "Traditional Desserts",
+    "slug": "desserts"
+  }
+},
+{
+  "model": "restaurant.category",
+  "pk": 7,
+  "fields": {
+    "name": "Tea & Coffee",
+    "slug": "tea"
+  }
+},
+{
+  "model": "restaurant.category",
+  "pk": 8,
+  "fields": {
+    "name": "Momo",
+    "slug": "momo"
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 7,
+  "fields": {
+    "category": 5,
+    "name": "Steamed Chicken Momo",
+    "description": "Juicy chicken dumplings steamed to perfection, served with our signature sesame tomato chutney.",
+    "price": "150.00",
+    "image": "menu_items/momo.jpg",
+    "is_featured": true,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 8,
+  "fields": {
+    "category": 5,
+    "name": "Mutton Sekuwa",
+    "description": "Tender mutton marinated in Himalayan spices and charcoal-grilled for a smoky flavor.",
+    "price": "750.00",
+    "image": "menu_items/sekuwa.jpg",
+    "is_featured": true,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 13,
+  "fields": {
+    "category": 4,
+    "name": "Veg rotitarkari",
+    "description": "",
+    "price": "180.00",
+    "image": "menu_items/481081961_1304501674073866_2855666679826042617_n_BWWMHSb.jpg",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 15,
+  "fields": {
+    "category": 7,
+    "name": "Milk Tea",
+    "description": "",
+    "price": "30.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 16,
+  "fields": {
+    "category": 7,
+    "name": "Milk Tea(Special)",
+    "description": "",
+    "price": "60.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 17,
+  "fields": {
+    "category": 7,
+    "name": "Black Tea",
+    "description": "",
+    "price": "20.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 18,
+  "fields": {
+    "category": 7,
+    "name": "Lemon Tea",
+    "description": "",
+    "price": "25.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 19,
+  "fields": {
+    "category": 7,
+    "name": "Milk Coffee",
+    "description": "",
+    "price": "100.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 20,
+  "fields": {
+    "category": 7,
+    "name": "Black Coffee",
+    "description": "",
+    "price": "60.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 21,
+  "fields": {
+    "category": 4,
+    "name": "Chicken KhajaSet",
+    "description": "",
+    "price": "270.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 22,
+  "fields": {
+    "category": 4,
+    "name": "Mutton KhajaSet",
+    "description": "",
+    "price": "350.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 23,
+  "fields": {
+    "category": 4,
+    "name": "Veg Khana",
+    "description": "",
+    "price": "180.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 24,
+  "fields": {
+    "category": 4,
+    "name": "Mutton Khana",
+    "description": "",
+    "price": "450.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 25,
+  "fields": {
+    "category": 4,
+    "name": "Chicken KhajaSet",
+    "description": "",
+    "price": "270.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 26,
+  "fields": {
+    "category": 8,
+    "name": "Chicken Steam Momo",
+    "description": "",
+    "price": "150.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 27,
+  "fields": {
+    "category": 8,
+    "name": "Chicken fry Momo",
+    "description": "",
+    "price": "180.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 28,
+  "fields": {
+    "category": 8,
+    "name": "Chicken Jhol momo",
+    "description": "",
+    "price": "180.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 29,
+  "fields": {
+    "category": 6,
+    "name": "Dahi",
+    "description": "",
+    "price": "50.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 30,
+  "fields": {
+    "category": 6,
+    "name": "Banana Lassi",
+    "description": "",
+    "price": "120.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 31,
+  "fields": {
+    "category": 6,
+    "name": "Plain Lassi",
+    "description": "",
+    "price": "100.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.menuitem",
+  "pk": 32,
+  "fields": {
+    "category": 4,
+    "name": "Paratha",
+    "description": "",
+    "price": "75.00",
+    "image": "",
+    "is_featured": false,
+    "is_available": true
+  }
+},
+{
+  "model": "restaurant.reservation",
+  "pk": 1,
+  "fields": {
+    "name": "urhbu",
+    "email": "vnzdhj@gmail.com",
+    "phone": "434336646",
+    "date": "2026-06-12",
+    "time": "00:24:00",
+    "guests": 1234,
+    "message": "neajgds",
+    "created_at": "2026-06-17T14:17:14.498Z"
+  }
+},
+{
+  "model": "restaurant.reservation",
+  "pk": 2,
+  "fields": {
+    "name": "Bhim Timsiana",
+    "email": "bhim@gmail.com",
+    "phone": "974637",
+    "date": "2026-07-28",
+    "time": "03:03:00",
+    "guests": 20,
+    "message": "nnn",
+    "created_at": "2026-06-18T03:42:21.291Z"
+  }
+},
+{
+  "model": "restaurant.testimonial",
+  "pk": 3,
+  "fields": {
+    "name": "Prashant Thapa",
+    "role": "Regular Patron",
+    "content": "The best Momo I've ever had! It tastes exactly like my grandmother's cooking. Truly authentic Nepali flavors.",
+    "rating": 5,
+    "image": ""
+  }
+},
+{
+  "model": "restaurant.testimonial",
+  "pk": 4,
+  "fields": {
+    "name": "Elena Rodriguez",
+    "role": "Travel Blogger",
+    "content": "An absolute hidden gem in Kathmandu. The Thakali Set is to die for. High-quality food and a lovely atmosphere.",
+    "rating": 5,
+    "image": ""
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 1,
+  "fields": {
+    "title": "Gallery",
+    "image": "gallery/unnamed_1.webp",
+    "created_at": "2026-06-17T16:53:26.556Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 2,
+  "fields": {
+    "title": "Gallery",
+    "image": "gallery/unnamed_1_0l3Ztxp.webp",
+    "created_at": "2026-06-17T16:53:26.557Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 3,
+  "fields": {
+    "title": "wdw",
+    "image": "gallery/unnamed_3.webp",
+    "created_at": "2026-06-17T16:53:51.816Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 4,
+  "fields": {
+    "title": "joinlk",
+    "image": "gallery/unnamed_5.webp",
+    "created_at": "2026-06-17T16:54:11.149Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 5,
+  "fields": {
+    "title": "kknk",
+    "image": "gallery/unnamed.webp",
+    "created_at": "2026-06-17T16:55:25.766Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 6,
+  "fields": {
+    "title": "ji",
+    "image": "gallery/unnamed_2.webp",
+    "created_at": "2026-06-17T16:55:51.084Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 7,
+  "fields": {
+    "title": "Bhim",
+    "image": "gallery/IMG_0424.jpg",
+    "created_at": "2026-07-02T11:24:55.050Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 8,
+  "fields": {
+    "title": "hajurbakochulo",
+    "image": "gallery/WhatsApp_Image_2026-08-24_at_08.33.07.jpeg",
+    "created_at": "2026-08-24T03:47:25.241Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 9,
+  "fields": {
+    "title": "hajurbako chulo",
+    "image": "gallery/WhatsApp_Image_2026-08-24_at_08.32.56.jpeg",
+    "created_at": "2026-08-24T03:47:46.602Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 10,
+  "fields": {
+    "title": "hajurbako chulo",
+    "image": "gallery/WhatsApp_Image_2026-08-24_at_08.33.12.jpeg",
+    "created_at": "2026-08-24T03:48:06.202Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 11,
+  "fields": {
+    "title": "hajurbako chulo",
+    "image": "gallery/WhatsApp_Image_2026-08-24_at_08.32.58_1.jpeg",
+    "created_at": "2026-08-24T03:48:24.288Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 12,
+  "fields": {
+    "title": "hajurbako chulo",
+    "image": "gallery/WhatsApp_Image_2026-08-24_at_08.33.09.jpeg",
+    "created_at": "2026-08-24T03:48:43.449Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 13,
+  "fields": {
+    "title": "hajurbako chulo",
+    "image": "gallery/WhatsApp_Image_2026-08-24_at_08.33.04.jpeg",
+    "created_at": "2026-08-24T03:49:00.208Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 14,
+  "fields": {
+    "title": "hajurbako chulo",
+    "image": "gallery/WhatsApp_Image_2026-08-24_at_08.32.58.jpeg",
+    "created_at": "2026-08-24T03:49:17.015Z"
+  }
+},
+{
+  "model": "restaurant.galleryitem",
+  "pk": 15,
+  "fields": {
+    "title": "hajurbako chulo",
+    "image": "gallery/WhatsApp_Image_2026-08-24_at_08.33.10.jpeg",
+    "created_at": "2026-08-24T03:49:43.768Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-06-17T16:53:26.558Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "1",
+    "object_repr": "Gallery",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-06-17T16:53:26.561Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "2",
+    "object_repr": "Gallery",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-06-17T16:53:30.808Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "1",
+    "object_repr": "Gallery",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-06-17T16:53:35.915Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "1",
+    "object_repr": "Gallery",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-06-17T16:53:51.818Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "3",
+    "object_repr": "wdw",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-06-17T16:54:11.151Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "4",
+    "object_repr": "joinlk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-06-17T16:55:25.767Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "5",
+    "object_repr": "kknk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-06-17T16:55:51.086Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "6",
+    "object_repr": "ji",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-07-02T11:24:55.052Z",
+    "user": [
+      "bhim"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "7",
+    "object_repr": "Bhim",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-08-24T03:47:25.243Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "8",
+    "object_repr": "hajurbakochulo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-08-24T03:47:46.604Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "9",
+    "object_repr": "hajurbako chulo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-08-24T03:48:06.204Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "10",
+    "object_repr": "hajurbako chulo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-08-24T03:48:24.291Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "11",
+    "object_repr": "hajurbako chulo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-08-24T03:48:43.452Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "12",
+    "object_repr": "hajurbako chulo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-08-24T03:49:00.209Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "13",
+    "object_repr": "hajurbako chulo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-08-24T03:49:17.016Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "14",
+    "object_repr": "hajurbako chulo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-08-24T03:49:43.770Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "galleryitem"
+    ],
+    "object_id": "15",
+    "object_repr": "hajurbako chulo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-08-24T03:56:36.059Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "7",
+    "object_repr": "Steamed Chicken Momo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-08-24T04:05:00.276Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "11",
+    "object_repr": "momo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-08-24T04:06:56.715Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "11",
+    "object_repr": "momo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-08-24T04:08:07.650Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "11",
+    "object_repr": "momo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-08-24T04:08:59.690Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "12",
+    "object_repr": "Veg Chowmin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-08-24T10:13:11.827Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "13",
+    "object_repr": "Veg rotitarkari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-08-24T10:14:09.494Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "13",
+    "object_repr": "Veg rotitarkari",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-08-24T10:20:30.485Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "14",
+    "object_repr": "chicken showman",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-08-28T04:09:49.231Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "Tea",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-08-28T04:30:31.427Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "15",
+    "object_repr": "Milk Tea",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-08-28T04:30:58.850Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "16",
+    "object_repr": "Milk Tea(Special)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-08-28T04:31:18.188Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "17",
+    "object_repr": "Black Tea",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-08-28T04:31:38.226Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "18",
+    "object_repr": "Lemon Tea",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-08-28T04:32:35.715Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "19",
+    "object_repr": "Milk Coffee",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-08-28T04:33:11.564Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "Tea & Coffee",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-08-28T04:33:25.623Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "20",
+    "object_repr": "Black Coffee",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-08-28T04:35:39.712Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "21",
+    "object_repr": "Chicken KhajaSet",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-08-28T04:35:58.780Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "22",
+    "object_repr": "Mutton KhajaSet",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-08-28T07:51:53.959Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "16",
+    "object_repr": "Milk Tea(Special)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-08-28T07:52:40.099Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "23",
+    "object_repr": "Veg Khana",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-08-28T07:53:00.626Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "24",
+    "object_repr": "Mutton Khana",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-08-28T07:54:02.950Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "25",
+    "object_repr": "Chicken KhajaSet",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-08-28T07:54:43.509Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "13",
+    "object_repr": "Veg rotitarkari",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-08-28T07:54:53.706Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "12",
+    "object_repr": "Veg Chowmin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-08-28T07:55:02.617Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "11",
+    "object_repr": "momo",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-08-28T07:55:18.591Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "22",
+    "object_repr": "Mutton KhajaSet",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-08-28T07:55:33.314Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "14",
+    "object_repr": "chicken Chowmin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-08-28T07:57:06.384Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "6",
+    "object_repr": "Thakali Dal Bhat Set",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-08-28T07:57:29.232Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "7",
+    "object_repr": "Steamed Chicken Momo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-08-28T07:57:45.603Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "9",
+    "object_repr": "Newari Khaja Set",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-08-28T07:57:53.604Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "8",
+    "object_repr": "Mutton Sekuwa",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-08-28T07:58:01.934Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "10",
+    "object_repr": "Yomari",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-08-28T08:03:20.693Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "14",
+    "object_repr": "chicken Chowmin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-08-28T08:03:34.575Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "11",
+    "object_repr": "momo",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-08-28T08:03:43.815Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "12",
+    "object_repr": "Veg Chowmin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-08-28T08:05:02.099Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "24",
+    "object_repr": "Mutton Khana",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-08-28T08:08:16.398Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "category"
+    ],
+    "object_id": "8",
+    "object_repr": "Momo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-08-28T08:08:30.541Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "26",
+    "object_repr": "Chicken Steam Momo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-08-28T08:08:59.038Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "27",
+    "object_repr": "Chicken fry Momo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-08-28T08:09:48.690Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "28",
+    "object_repr": "Chicken Jhol momo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-08-28T08:12:10.111Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "29",
+    "object_repr": "Dahi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-08-28T08:12:47.409Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "30",
+    "object_repr": "Banana Lassi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-08-28T08:13:06.837Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "31",
+    "object_repr": "Plain Lassi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-08-28T08:18:17.132Z",
+    "user": [
+      "mihb"
+    ],
+    "content_type": [
+      "restaurant",
+      "menuitem"
+    ],
+    "object_id": "32",
+    "object_repr": "Paratha",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]
