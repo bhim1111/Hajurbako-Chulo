@@ -5,7 +5,6 @@ Django settings for hajurbako_chulo_project project.
 import os
 from pathlib import Path
 from django.core.exceptions import ImproperlyConfigured
-from pathlib import Path
 from dotenv import load_dotenv
 
 
@@ -133,11 +132,24 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = [BASE_DIR / "static"]  # <--- ADD THIS LINE
-STATICFILES_STORAGE = 'whitenoise.storage.WhiteNoiseStaticStorage'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://hajurbako-chulo-production.up.railway.app",
+]
+
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

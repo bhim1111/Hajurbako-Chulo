@@ -411,7 +411,7 @@ header.scrolled .logo h1, header.scrolled .nav-links a {
 
 /* Reservation Form */
 .reservation {
-    background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.9)), url('../images/pattern.png');
+    background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.9));
     color: var(--white);
 }
 
