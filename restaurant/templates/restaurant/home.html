@@ -9,8 +9,71 @@
         <p>Experience the soul of Nepal in every bite at Hajurbako Chulo.</p>
         <div class="hero-btns">
             <a href="#menu" class="btn-primary">View Menu</a>
-            <a href="#reservation" class="btn-secon dary">Reserve a Table</a>
+            <a href="#reservation" class="btn-secondary">Reserve a Table</a>
         </div>
+    </div>
+</section>
+
+<!-- Menu Section (Placed 2nd) -->
+<section class="section reveal" id="menu" style="background: #fff;">
+    <div class="section-title">
+        <h2>Full Menu</h2>
+        <div class="divider"></div>
+        <p>Explore our wide range of traditional flavors.</p>
+    </div>
+    
+    <div class="menu-tabs">
+        {% for category in categories %}
+        <div class="menu-tab {% if forloop.first %}active{% endif %}" data-target="{{ category.slug }}">
+            {{ category.name }}
+        </div>
+        {% empty %}
+        <div class="menu-tab active">Main Course</div>
+        <div class="menu-tab">Snacks</div>
+        <div class="menu-tab">Desserts</div>
+        {% endfor %}
+    </div>
+
+    <div class="menu-items-container">
+        {% for category in categories %}
+        <div class="menu-items-group" id="{{ category.slug }}" style="display: {% if forloop.first %}grid{% else %}none{% endif %};">
+            <div class="menu-items">
+                {% for item in category.items.all %}
+                <div class="menu-item">
+                    <div class="item-details">
+                        <h4>{{ item.name }}</h4>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    <div class="item-price">Rs. {{ item.price }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% empty %}
+        <div class="menu-items">
+            <div class="menu-item">
+                <div class="item-details">
+                    <h4>Newari Khaja Set</h4>
+                    <p>Beaten rice with various side dishes like choila, bhatmas, and more.</p>
+                </div>
+                <div class="item-price">Rs. 650</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <h4>Chatamari</h4>
+                    <p>Rice flour crepe topped with minced meat and egg.</p>
+                </div>
+                <div class="item-price">Rs. 350</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <h4>Yomari</h4>
+                    <p>Steamed rice-flour dumpling filled with molasses and sesame seeds.</p>
+                </div>
+                <div class="item-price">Rs. 250</div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </section>
 
@@ -111,69 +174,6 @@
             <h3>Homemade Love</h3>
             <p>Every meal is prepared with the same care and love as a homemade feast.</p>
         </div>
-    </div>
-</section>
-
-<!-- Menu Section -->
-<section class="section reveal" id="menu" style="background: #fff;">
-    <div class="section-title">
-        <h2>Full Menu</h2>
-        <div class="divider"></div>
-        <p>Explore our wide range of traditional flavors.</p>
-    </div>
-    
-    <div class="menu-tabs">
-        {% for category in categories %}
-        <div class="menu-tab {% if forloop.first %}active{% endif %}" data-target="{{ category.slug }}">
-            {{ category.name }}
-        </div>
-        {% empty %}
-        <div class="menu-tab active">Main Course</div>
-        <div class="menu-tab">Snacks</div>
-        <div class="menu-tab">Desserts</div>
-        {% endfor %}
-    </div>
-
-    <div class="menu-items-container">
-        {% for category in categories %}
-        <div class="menu-items-group" id="{{ category.slug }}" style="display: {% if forloop.first %}grid{% else %}none{% endif %};">
-            <div class="menu-items">
-                {% for item in category.items.all %}
-                <div class="menu-item">
-                    <div class="item-details">
-                        <h4>{{ item.name }}</h4>
-                        <p>{{ item.description }}</p>
-                    </div>
-                    <div class="item-price">Rs. {{ item.price }}</div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% empty %}
-        <div class="menu-items">
-            <div class="menu-item">
-                <div class="item-details">
-                    <h4>Newari Khaja Set</h4>
-                    <p>Beaten rice with various side dishes like choila, bhatmas, and more.</p>
-                </div>
-                <div class="item-price">Rs. 650</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-details">
-                    <h4>Chatamari</h4>
-                    <p>Rice flour crepe topped with minced meat and egg.</p>
-                </div>
-                <div class="item-price">Rs. 350</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-details">
-                    <h4>Yomari</h4>
-                    <p>Steamed rice-flour dumpling filled with molasses and sesame seeds.</p>
-                </div>
-                <div class="item-price">Rs. 250</div>
-            </div>
-        </div>
-        {% endfor %}
     </div>
 </section>
 
