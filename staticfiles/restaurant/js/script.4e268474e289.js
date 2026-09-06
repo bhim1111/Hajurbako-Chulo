@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menu Category Tabs logic
     const tabs = document.querySelectorAll('.menu-tab');
     const groups = document.querySelectorAll('.menu-items-group');
-    const tabsWrapper = document.querySelector('.menu-tabs-wrapper');
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -14,17 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetGroup = document.getElementById(target);
             if (targetGroup) {
                 targetGroup.style.display = 'grid';
-            }
-
-            // Scroll selected tab into view smoothly on mobile
-            if (tabsWrapper) {
-                const tabLeft = tab.offsetLeft;
-                const tabWidth = tab.offsetWidth;
-                const wrapperWidth = tabsWrapper.offsetWidth;
-                tabsWrapper.scrollTo({
-                    left: tabLeft - (wrapperWidth / 2) + (tabWidth / 2),
-                    behavior: 'smooth'
-                });
             }
         });
     });

@@ -10,16 +10,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'restaurant/css/style.css' %}">
-    
-    <!-- Favicon placeholder -->
-
 </head>
 <body>
 
@@ -30,12 +27,18 @@
         </div>
         <nav>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#reservation" class="cta-btn">Book Table</a></li>
+                <li><a href="#home"><i class="fas fa-home mobile-only-icon"></i> Home</a></li>
+                <li><a href="#menu"><i class="fas fa-utensils mobile-only-icon"></i> Menu</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle mobile-only-icon"></i> About</a></li>
+                <li><a href="#gallery"><i class="fas fa-images mobile-only-icon"></i> Gallery</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope mobile-only-icon"></i> Contact</a></li>
+                <li><a href="#reservation" class="cta-btn"><i class="fas fa-calendar-check mobile-only-icon"></i> Book Table</a></li>
+                
+                <!-- Extra Contact details inside mobile drawer -->
+                <div class="mobile-drawer-footer">
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:983278200">983278200</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Soltimode, Kathmandu</p>
+                </div>
             </ul>
             <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
                 <span></span>
@@ -50,27 +53,48 @@
         {% endblock %}
     </main>
 
+    <!-- Mobile Sticky Bottom Action Bar -->
+    <div class="mobile-bottom-bar">
+        <a href="tel:983278200" class="bottom-nav-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call</span>
+        </a>
+        <a href="#menu" class="bottom-nav-item highlight">
+            <i class="fas fa-utensils"></i>
+            <span>Menu</span>
+        </a>
+        <a href="#reservation" class="bottom-nav-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Reserve</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-col">
                 <h3>Hajurbako Chulo</h3>
                 <p>Authentic Nepali taste served with tradition. Bringing the warmth of homemade meals to your table.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div class="footer-col">
                 <h3>Opening Hours</h3>
-                <p>Mon - Fri: 11:00 AM - 10:00 PM</p>
-                <p>Sat - Sun: 10:00 AM - 11:00 PM</p>
+                <p><i class="far fa-clock"></i> Mon - Fri: 11:00 AM - 10:00 PM</p>
+                <p><i class="far fa-clock"></i> Sat - Sun: 10:00 AM - 11:00 PM</p>
             </div>
             <div class="footer-col">
-                <h3>Find Us</h3>
-                <p>Soltimode, Kathmandu, Nepal</p>
-                <p>Phone: 983278200</p>
-                <p>Email: info@hajurbakochulo.com</p>
+                <h3>Find & Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Soltimode, Kathmandu, Nepal</p>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:983278200">Phone: 983278200</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@hajurbakochulo.com">info@hajurbakochulo.com</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -81,14 +105,27 @@
     <!-- Custom JS -->
     <script src="{% static 'restaurant/js/script.js' %}"></script>
     <script>
-        // Header scroll effect
+        // Header scroll effect & back to top visibility
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
+            const backToTop = document.getElementById('back-to-top');
+            
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
+
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top click behavior
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Reveal animations on scroll

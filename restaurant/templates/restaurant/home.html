@@ -8,8 +8,8 @@
         <h2>Authentic Nepali Taste,<br>Served with Tradition</h2>
         <p>Experience the soul of Nepal in every bite at Hajurbako Chulo.</p>
         <div class="hero-btns">
-            <a href="#menu" class="btn-primary">View Menu</a>
-            <a href="#reservation" class="btn-secondary">Reserve a Table</a>
+            <a href="#menu" class="btn-primary"><i class="fas fa-utensils"></i> View Menu</a>
+            <a href="#reservation" class="btn-secondary"><i class="fas fa-calendar-alt"></i> Reserve Table</a>
         </div>
     </div>
 </section>
@@ -19,19 +19,21 @@
     <div class="section-title">
         <h2>Full Menu</h2>
         <div class="divider"></div>
-        <p>Explore our wide range of traditional flavors.</p>
+        <p>Explore our wide range of traditional Nepali delicacies.</p>
     </div>
     
-    <div class="menu-tabs">
-        {% for category in categories %}
-        <div class="menu-tab {% if forloop.first %}active{% endif %}" data-target="{{ category.slug }}">
-            {{ category.name }}
+    <div class="menu-tabs-wrapper">
+        <div class="menu-tabs">
+            {% for category in categories %}
+            <div class="menu-tab {% if forloop.first %}active{% endif %}" data-target="{{ category.slug }}">
+                {{ category.name }}
+            </div>
+            {% empty %}
+            <div class="menu-tab active"><i class="fas fa-concierge-bell"></i> Main Course</div>
+            <div class="menu-tab"><i class="fas fa-hamburger"></i> Snacks & Starters</div>
+            <div class="menu-tab"><i class="fas fa-cookie-bite"></i> Desserts & Sweets</div>
+            {% endfor %}
         </div>
-        {% empty %}
-        <div class="menu-tab active">Main Course</div>
-        <div class="menu-tab">Snacks</div>
-        <div class="menu-tab">Desserts</div>
-        {% endfor %}
     </div>
 
     <div class="menu-items-container">
@@ -40,11 +42,20 @@
             <div class="menu-items">
                 {% for item in category.items.all %}
                 <div class="menu-item">
-                    <div class="item-details">
-                        <h4>{{ item.name }}</h4>
+                    <div class="menu-item-thumb">
+                        {% if item.image %}
+                            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                        {% else %}
+                            <img src="{% static 'restaurant/images/dal-bhat.jpg' %}" alt="{{ item.name }}">
+                        {% endif %}
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h4>{{ item.name }}</h4>
+                            <div class="item-price">Rs. {{ item.price }}</div>
+                        </div>
                         <p>{{ item.description }}</p>
                     </div>
-                    <div class="item-price">Rs. {{ item.price }}</div>
                 </div>
                 {% endfor %}
             </div>
@@ -52,25 +63,76 @@
         {% empty %}
         <div class="menu-items">
             <div class="menu-item">
-                <div class="item-details">
-                    <h4>Newari Khaja Set</h4>
-                    <p>Beaten rice with various side dishes like choila, bhatmas, and more.</p>
+                <div class="menu-item-thumb">
+                    <img src="{% static 'restaurant/images/dal-bhat.jpg' %}" alt="Thakali Dal Bhat">
                 </div>
-                <div class="item-price">Rs. 650</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h4>Thakali Dal Bhat Set</h4>
+                        <div class="item-price">Rs. 850</div>
+                    </div>
+                    <p>Authentic set with lentils, aromatic rice, local curry, saag, and spicy pickles.</p>
+                </div>
             </div>
             <div class="menu-item">
-                <div class="item-details">
-                    <h4>Chatamari</h4>
-                    <p>Rice flour crepe topped with minced meat and egg.</p>
+                <div class="menu-item-thumb">
+                    <img src="{% static 'restaurant/images/momo.jpg' %}" alt="Steamed Momo">
                 </div>
-                <div class="item-price">Rs. 350</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h4>Steamed Momo</h4>
+                        <div class="item-price">Rs. 450</div>
+                    </div>
+                    <p>Traditional juicy dumplings served with home-ground spicy sesame tomato chutney.</p>
+                </div>
             </div>
             <div class="menu-item">
-                <div class="item-details">
-                    <h4>Yomari</h4>
-                    <p>Steamed rice-flour dumpling filled with molasses and sesame seeds.</p>
+                <div class="menu-item-thumb">
+                    <img src="{% static 'restaurant/images/sekuwa.jpg' %}" alt="Mutton Sekuwa">
                 </div>
-                <div class="item-price">Rs. 250</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h4>Mutton Sekuwa</h4>
+                        <div class="item-price">Rs. 750</div>
+                    </div>
+                    <p>Traditional charcoal-grilled tender mutton marinated in rich Himalayan herbs.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-thumb">
+                    <img src="{% static 'restaurant/images/g1.jpg' %}" alt="Newari Khaja Set">
+                </div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h4>Newari Khaja Set</h4>
+                        <div class="item-price">Rs. 650</div>
+                    </div>
+                    <p>Beaten rice served with spicy choila, bhatmas, egg, and pickled bamboo shoots.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-thumb">
+                    <img src="{% static 'restaurant/images/g2.jpg' %}" alt="Chatamari">
+                </div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h4>Chatamari (Nepali Pizza)</h4>
+                        <div class="item-price">Rs. 350</div>
+                    </div>
+                    <p>Crispy rice flour crepe topped with seasoned minced meat, herbs, and fried egg.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-thumb">
+                    <img src="{% static 'restaurant/images/g3.jpg' %}" alt="Yomari">
+                </div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h4>Yomari Special</h4>
+                        <div class="item-price">Rs. 250</div>
+                    </div>
+                    <p>Steamed rice-flour delicacy stuffed with sweet molasses (chaku) and sesame seeds.</p>
+                </div>
             </div>
         </div>
         {% endfor %}
@@ -91,8 +153,8 @@
         <div class="about-text">
             <h3>Hajurbako Chulo</h3>
             <p>At Hajurbako Chulo, we believe that food is more than just sustenance; it's a celebration of culture, family, and tradition. Our name, which translates to "Grandfather's Hearth," reflects our commitment to preserving the authentic flavors of homemade Nepali cuisine.</p>
-            <p>Every dish we serve is prepared using traditional recipes and the finest local ingredients, bringing the warmth and hospitality of a Nepali home to each of our guests. Join us for a culinary journey through the hills and valleys of Nepal.</p>
-            <a href="#menu" class="btn-primary">Discover More</a>
+            <p>Every dish we serve is prepared using traditional recipes and the finest local ingredients, bringing the warmth and hospitality of a Nepali home to each of our guests.</p>
+            <a href="#menu" class="btn-primary">Discover Menu</a>
         </div>
     </div>
 </section>
@@ -109,6 +171,7 @@
         <div class="dish-card">
             <div class="dish-img">
                 <img src="{{ dish.image.url }}" alt="{{ dish.name }}">
+                <span class="dish-badge"><i class="fas fa-star"></i> Featured</span>
             </div>
             <div class="dish-info">
                 <h3>{{ dish.name }}</h3>
@@ -121,30 +184,33 @@
         <div class="dish-card">
             <div class="dish-img">
                 <img src="{% static 'restaurant/images/dal-bhat.jpg' %}" alt="Dal Bhat">
+                <span class="dish-badge"><i class="fas fa-fire"></i> Best Seller</span>
             </div>
             <div class="dish-info">
                 <h3>Thakali Dal Bhat</h3>
-                <p>Authentic Thakali set with lentils, rice, vegetable curry, and spicy pickles.</p>
+                <p>Authentic Thakali set with organic lentils, aromatic rice, vegetable curry, and spicy local pickles.</p>
                 <div class="dish-price">Rs. 850</div>
             </div>
         </div>
         <div class="dish-card">
             <div class="dish-img">
                 <img src="{% static 'restaurant/images/momo.jpg' %}" alt="Momo">
+                <span class="dish-badge"><i class="fas fa-heart"></i> Favorite</span>
             </div>
             <div class="dish-info">
                 <h3>Steamed Momo</h3>
-                <p>Traditional Nepali dumplings with spicy sesame tomato chutney.</p>
+                <p>Traditional Nepali juicy dumplings served with our secret spicy sesame tomato chutney.</p>
                 <div class="dish-price">Rs. 450</div>
             </div>
         </div>
         <div class="dish-card">
             <div class="dish-img">
                 <img src="{% static 'restaurant/images/sekuwa.jpg' %}" alt="Sekuwa">
+                <span class="dish-badge"><i class="fas fa-pepper-hot"></i> Chef Special</span>
             </div>
             <div class="dish-info">
                 <h3>Mutton Sekuwa</h3>
-                <p>Traditional charcoal-grilled mutton marinated in local spices.</p>
+                <p>Traditional charcoal-grilled tender mutton marinated in rich Himalayan herbs and spices.</p>
                 <div class="dish-price">Rs. 750</div>
             </div>
         </div>
@@ -162,17 +228,17 @@
         <div class="feature-box">
             <i class="fas fa-leaf"></i>
             <h3>Organic Ingredients</h3>
-            <p>We source our ingredients directly from local farmers to ensure freshness and quality.</p>
+            <p>We source our ingredients directly from local mountain farmers to ensure unmatched freshness.</p>
         </div>
         <div class="feature-box">
             <i class="fas fa-fire-alt"></i>
             <h3>Traditional Cooking</h3>
-            <p>Our chefs use clay ovens and wood fires to capture the authentic smoky flavors.</p>
+            <p>Our chefs cook over clay hearths and wood fires to preserve authentic smoky flavors.</p>
         </div>
         <div class="feature-box">
             <i class="fas fa-heart"></i>
             <h3>Homemade Love</h3>
-            <p>Every meal is prepared with the same care and love as a homemade feast.</p>
+            <p>Every meal is prepared with the genuine care and hospitality of a Nepali home feast.</p>
         </div>
     </div>
 </section>
@@ -182,6 +248,7 @@
     <div class="section-title">
         <h2>Visual Journey</h2>
         <div class="divider"></div>
+        <p>Glimpse into our ambience and handcrafted dishes.</p>
     </div>
     <div class="gallery-grid">
         {% for item in gallery_items %}
@@ -202,6 +269,7 @@
     <div class="section-title">
         <h2>What Guests Say</h2>
         <div class="divider"></div>
+        <p>Real stories from food lovers who visited us.</p>
     </div>
     <div class="testimonials-slider">
         {% for testimonial in testimonials %}
@@ -211,7 +279,7 @@
                 {% if testimonial.image %}
                 <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="user-img">
                 {% else %}
-                <div class="user-img"></div>
+                <div class="user-img"><i class="fas fa-user"></i></div>
                 {% endif %}
                 <div>
                     <h4>{{ testimonial.name }}</h4>
@@ -223,10 +291,20 @@
         <div class="testimonial-card">
             <p>"The Thakali Set was incredible. It tasted exactly like what I've had in the Mustang region. Truly authentic!"</p>
             <div class="user-info">
-                <div class="user-img"></div>
+                <div class="user-img"><i class="fas fa-user"></i></div>
                 <div>
                     <h4>Rupak Sharma</h4>
                     <small>Food Critic</small>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p>"The atmosphere and warmth at Hajurbako Chulo makes you feel right at home. The steamed momos are out of this world!"</p>
+            <div class="user-info">
+                <div class="user-img"><i class="fas fa-user"></i></div>
+                <div>
+                    <h4>Saraswati Thapa</h4>
+                    <small>Local Guide</small>
                 </div>
             </div>
         </div>
@@ -239,13 +317,13 @@
     <div class="section-title">
         <h2 style="color: white;">Reserve Your Table</h2>
         <div class="divider"></div>
-        <p style="color: var(--cream);">Plan your visit and enjoy an unforgettable meal.</p>
+        <p style="color: var(--cream);">Book your table effortlessly on your phone or computer.</p>
     </div>
     
     {% if messages %}
     <div class="messages">
         {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}" style="background: var(--gold); color: var(--maroon); padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center;">
+        <div class="alert alert-{{ message.tags }}" style="background: var(--gold); color: var(--maroon); padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-weight: bold;">
             {{ message }}
         </div>
         {% endfor %}
@@ -254,20 +332,41 @@
 
     <form class="reservation-form" method="POST">
         {% csrf_token %} 
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="number" name="guests" placeholder="No. of Guests" required>
-        <input type="date" name="date" required>
-        <input type="time" name="time" required>
-        <textarea name="message" placeholder="Special Requests (Optional)"></textarea>
-        <button type="submit" class="btn-primary">Confirm Reservation</button>
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="98XXXXXXXX" inputmode="tel" required>
+        </div>
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="50" placeholder="2" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Reservation Date</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time Slot</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group full-width">
+            <label for="message">Special Requests (Optional)</label>
+            <textarea id="message" name="message" placeholder="Allergies, seating preferences..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-width"><i class="fas fa-check-circle"></i> Confirm Reservation</button>
     </form>
 </section>
 
 <!-- Integration for map -->
 <section style="padding: 0;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14129.563065640243!2d85.31165185!3d27.7052354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907b223402d%3A0xc07cf3543d81b379!2sDurbar%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1687000000000!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14129.563065640243!2d85.31165185!3d27.7052354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907b223402d%3A0xc07cf3543d81b379!2sDurbar%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1687000000000!5m2!1sen!2snp" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 
 {% endblock %}

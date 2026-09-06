@@ -224,7 +224,7 @@ header.scrolled .logo h1, header.scrolled .nav-links a {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(74, 0, 0, 0.68)), url('../images/hero-bg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(74, 0, 0, 0.68)), url("../images/hero-bg.68a763a22c29.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
